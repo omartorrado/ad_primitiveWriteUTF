@@ -44,9 +44,9 @@ public class PrimitiveWriteUTF {
                     System.out.println("Leemos a "+iteraciones+"ª cadea: " + dis.readUTF());
                     iteraciones++;
                 }
-                bytesCadea = bytesTotales - dis.available();
-                System.out.println("Numero de bytes leidos: " + bytesCadea);
+                bytesCadea = bytesTotales - dis.available();                
                 if (dis.available() > 0) {
+                    System.out.println("Numero de bytes leidos: " + bytesCadea);
                     System.out.println("Numero de bytes por leer = " + dis.available());
                 }
             }
@@ -63,7 +63,7 @@ public class PrimitiveWriteUTF {
         try {
             int totalBytes = 0;
             DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file, false)));
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 2; i++) {
                 dos.writeUTF(cadea);
                 System.out.println("WriteUTF escribiu: " + cadea);
                 System.out.println("WriteUTF escribiu: " + (dos.size() - totalBytes) + " bytes");
