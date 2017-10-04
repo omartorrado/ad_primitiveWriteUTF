@@ -60,6 +60,10 @@ public class PrimitiveWriteUTF {
 
     public static void escribir(String file) {
         String cadea = "esta e unha cadea\n";
+        /*
+        En linux para ver los ficheros creados con este metodo se puede usar hexdump -C nombrefichero.extension
+        para ver los bytes en hexadecimal, y xxd -b nombrefichero.extension para ver los bytes en binarios
+        */
         try {
             int totalBytes = 0;
             DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file, false)));
